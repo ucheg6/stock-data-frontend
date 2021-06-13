@@ -35,10 +35,10 @@ export default function StockData() {
     if (stockDataToRender) {
       if(stockDataToRender.data.length > 0) {
         return <ul className="mt-50 slide-up-fade-in styled" id="stockData" data-testid="stock-data">
-          <li className="py-10">Open: {stockDataToRender.data && stockDataToRender.data[0] && stockDataToRender.data[0].open}</li>
-          <li className="py-10">Close: {stockDataToRender.data && stockDataToRender.data[0] && stockDataToRender.data[0].close}</li>
-          <li className="py-10">High: {stockDataToRender.data && stockDataToRender.data[0] && stockDataToRender.data[0].high}</li>
-          <li className="py-10">Low: {stockDataToRender.data && stockDataToRender.data[0] && stockDataToRender.data[0].low}</li>
+          <li className="py-10">Open: {stockDataToRender.data[0].open}</li>
+          <li className="py-10">Close: {stockDataToRender.data[0].close}</li>
+          <li className="py-10">High: {stockDataToRender.data[0].high}</li>
+          <li className="py-10">Low: {stockDataToRender.data[0].low}</li>
         </ul>
       } else {
         return <div className="mt-50 slide-up-fade-in" id="no-result" data-testid="no-result">No Results Found</div>
